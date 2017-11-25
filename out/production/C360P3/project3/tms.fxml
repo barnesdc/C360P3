@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -7,14 +10,39 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.collections.* ?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project3.PurchaseController">
    <children>
-      <TitledPane animated="false" prefHeight="95.0" prefWidth="435.0" text="untitled">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </TitledPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="35.0" prefHeight="48.0" prefWidth="339.0" style="-fx-border-color: black; -fx-border-width: 4pt;" text="HOLIDAY  THEATER">
+         <font>
+            <Font name="Herculanum" size="24.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="22.0" layoutY="96.0" prefHeight="48.0" prefWidth="339.0" text="current movie:   I LOVE MINNIE">
+         <font>
+            <Font name="Herculanum" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="190.0" fitWidth="216.0" layoutX="246.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@heart_minni.jpg" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="dateSelector" editable="false" layoutX="22.0" layoutY="157.0" />
+      <ComboBox fx:id="chkMovieSelector" layoutX="22.0" layoutY="200.0" prefHeight="27.0" prefWidth="196.0" promptText="Select Movie Time">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="10:00 AM" />
+               <String fx:value="8:00 PM" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <ChoiceBox fx:id="chcTicketSelector" layoutX="21.0" layoutY="256.0" prefHeight="27.0" prefWidth="196.0" />
+      <Button fx:id="btnPurchaseTickets" defaultButton="true" layoutX="25.0" layoutY="295.0" mnemonicParsing="false" styleClass="green" stylesheets="@tms.css" text="Purchase Ticket(s)" />
+      <Button fx:id="btnExit" cancelButton="true" layoutX="182.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+      <TextField fx:id="txPurchaseStatus" alignment="CENTER" editable="false" layoutX="22.0" layoutY="348.0" prefHeight="27.0" prefWidth="361.0" promptText="Purchase status..." />
+      <ProgressBar fx:id="barStatus" layoutX="92.0" layoutY="382.0" prefWidth="200.0" progress="0.06" />
+      <Label alignment="CENTER" layoutX="24.0" layoutY="239.0" prefHeight="17.0" prefWidth="196.0" text="Select # of tickets:" />
    </children>
-</AnchorPane>
+</Pane>

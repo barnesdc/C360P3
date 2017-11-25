@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project3.initController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="35.0" prefHeight="48.0" prefWidth="339.0" style="-fx-border-color: black; -fx-border-width: 4pt;" text="HOLIDAY  THEATER">
+         <font>
+            <Font name="Herculanum" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnInitPurchaseTickets" defaultButton="true" layoutX="70.0" layoutY="300.0" mnemonicParsing="false" onAction="#handlePurchase" stylesheets="@tms.css" text="Purchase Ticket(s)" />
+      <Button fx:id="btnInitReturnTickets" defaultButton="true" layoutX="206.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleReturn" prefHeight="27.0" prefWidth="134.0" stylesheets="@tms.css" text="Return Ticket(s)" />
+      <Button fx:id="btnExit" cancelButton="true" layoutX="174.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="27.0" prefWidth="65.0" text="Exit" />
+      <Label alignment="CENTER" layoutX="36.0" layoutY="275.0" prefHeight="17.0" prefWidth="339.0" text="Select one of the following options">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="147.0" fitWidth="333.0" layoutX="39.0" layoutY="110.0" pickOnBounds="true">
+         <image>
+            <Image url="@holiday2.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
